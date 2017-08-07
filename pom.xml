@@ -4,7 +4,7 @@
 	<groupId>cn.spring4</groupId>
 	<artifactId>EasyWechatTest</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3</version>
 	<name>EasyWechatTest Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
@@ -50,13 +50,12 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>4.3.9.RELEASE</version>
 		</dependency>
-
 		<dependency>
 			<groupId>com.spring4</groupId>
 			<artifactId>EasyWeChat</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.2</version>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> 
 	</dependencies>
 	<build>
 		<finalName>EasyWechatTest</finalName>

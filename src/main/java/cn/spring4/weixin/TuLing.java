@@ -1,6 +1,7 @@
 package cn.spring4.weixin;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.spring4.utils.HttpClientUtil;
 
 public class TuLing {
@@ -14,6 +15,8 @@ public class TuLing {
 		sb.append("\"userid\": \"" + userid + "\"\n");
 		sb.append("}");
 		System.out.println(sb.toString());
-		return HttpClientUtil.postJson(url, sb.toString());
+		String json = HttpClientUtil.postJson(url, sb.toString());
+		JSONObject object = JSONObject.parseObject(json);
+		return object.getString("text");
 	}
 }
