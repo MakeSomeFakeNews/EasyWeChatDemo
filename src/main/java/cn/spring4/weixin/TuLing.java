@@ -1,7 +1,7 @@
 package cn.spring4.weixin;
 
 
-import com.spring4.weixin.utils.HttpClientUtil;
+import com.spring4.utils.HttpClientUtil;
 
 public class TuLing {
 	public static String  getMsg(String msg, String userid) {

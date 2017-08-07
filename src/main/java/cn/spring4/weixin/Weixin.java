@@ -3,10 +3,10 @@ package cn.spring4.weixin;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.spring4.weixin.sdk.menu.MenuApi;
-import com.spring4.weixin.sdk.menu.WeixinMenu;
-import com.spring4.weixin.sdk.token.Access_Token;
-import com.spring4.weixin.sdk.token.Token;
+import com.spring4.weixin.api.menu.MenuApi;
+import com.spring4.weixin.api.menu.WeixinMenu;
+import com.spring4.weixin.api.token.Access_Token;
+import com.spring4.weixin.api.token.TokenApi;
 
 /**
  * Weixin.java文件：作用简介</br>
@@ -33,7 +33,7 @@ public class Weixin {
 		weixinMenu.setSub_button(list);
 		MenuApi menu = new MenuApi();
 		//获取基础access_token
-		Token token = new Token();
+		TokenApi token = new TokenApi();
 		Access_Token access_token = token.get_access_token();
 		menu.createMenu(weixinMenu, access_token.getAccess_token());
 	}

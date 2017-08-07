@@ -11,11 +11,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.spring4.weixin.sdk.oauth.Oauth2;
-import com.spring4.weixin.sdk.oauth.Oauth2Token;
-import com.spring4.weixin.sdk.oauth.UserInfo;
+import com.spring4.utils.StrKit;
+import com.spring4.weixin.api.oauth.Oauth2Api;
+import com.spring4.weixin.api.oauth.Oauth2Token;
+import com.spring4.weixin.api.oauth.UserInfo;
 import com.spring4.weixin.sdk.wx.Weixin;
-import com.spring4.weixin.utils.StrKit;
 
 /**
  * 作者:周锦华 日期: 2017年8月2日 下午2:54:09
@@ -53,7 +53,7 @@ public class HelloWorld {
 	 */
 	@RequestMapping("/oauth")
 	public void oauth(String code, HttpServletResponse resp) throws IOException, NoSuchAlgorithmException {
-		Oauth2 o2 = new Oauth2();
+		Oauth2Api o2 = new Oauth2Api();
 		if (StrKit.isBlank(code)) {
 			resp.sendRedirect(o2.getSnsapi_userinfoUrl());
 			return;

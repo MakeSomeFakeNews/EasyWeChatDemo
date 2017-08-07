@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.spring4.utils.PropertiesUtil;
 import com.spring4.weixin.sdk.msg.WeiXinAccess;
-import com.spring4.weixin.utils.PropertiesUtil;
 
 /**
  * 作者:周锦华 日期: 2017年8月2日 下午3:25:22
